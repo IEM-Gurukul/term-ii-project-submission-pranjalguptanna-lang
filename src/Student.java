@@ -1,0 +1,56 @@
+public abstract class Student {
+
+    // Private fields (Encapsulation)
+    private String name;
+    private String rollNumber;
+    private double marks;
+
+    // All-arguments constructor with marks validation
+    public Student(String name, String rollNumber, double marks) throws InvalidGradeException {
+        this.name = name;
+        this.rollNumber = rollNumber;
+        if (marks < 0 || marks > 100) {
+            throw new InvalidGradeException(marks);
+        }
+        this.marks = marks;
+    }
+
+    // Getters
+    public String getName() {
+        return name;
+    }
+
+    public String getRollNumber() {
+        return rollNumber;
+    }
+
+    public double getMarks() {
+        return marks;
+    }
+
+    // Setters
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setRollNumber(String rollNumber) {
+        this.rollNumber = rollNumber;
+    }
+
+    // Setter for marks with validation
+    public void setMarks(double marks) throws InvalidGradeException {
+        if (marks < 0 || marks > 100) {
+            throw new InvalidGradeException(marks);
+        }
+        this.marks = marks;
+    }
+
+    // Abstract method — subclasses must implement their own grading logic
+    public abstract String calculateGrade();
+
+    // Override toString for formatted student summary
+    @Override
+    public String toString() {
+        return "Name: " + name + " | Roll Number: " + rollNumber + " | Marks: " + marks;
+    }
+}
