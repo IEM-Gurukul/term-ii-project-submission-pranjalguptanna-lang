@@ -68,10 +68,22 @@ public class Main {
                         }
                         break;
                     case 3:
-                        System.out.println("Feature coming in next task...");
+                        // Display All Students
+                        System.out.println("----------------------------------------");
+                        controller.displayAll();
+                        System.out.println("----------------------------------------");
                         break;
                     case 4:
-                        System.out.println("Feature coming in next task...");
+                        // Search by Roll Number
+                        System.out.print("Enter roll number to search: ");
+                        String searchRoll = scanner.nextLine();
+                        Student result = controller.searchByRoll(searchRoll);
+                        if (result != null) {
+                            System.out.println(result.toString());
+                            System.out.println("Grade: " + result.calculateGrade());
+                        } else {
+                            System.out.println("No student found with roll number: " + searchRoll);
+                        }
                         break;
                     case 5:
                         System.out.println("Goodbye!");
