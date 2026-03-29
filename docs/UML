@@ -1,0 +1,61 @@
+                ┌────────────────────────────┐
+                │         Student            │
+                │       <<abstract>>         │
+                ├────────────────────────────┤
+                │ - name : String            │
+                │ - rollNumber : String      │
+                │ - marks : double           │
+                ├────────────────────────────┤
+                │ + Student()                │
+                │ + getName() : String       │
+                │ + getRollNumber() : String │
+                │ + getMarks() : double      │
+                │ + toString() : String      │
+                │ + calculateGrade() : String│
+                │        (abstract)          │
+                └───────────▲────────────────┘
+                            │
+        ┌───────────────────┴───────────────────┐
+        │                                       │
+┌──────────────────────┐          ┌──────────────────────┐
+│    Undergraduate     │          │     Postgraduate     │
+├──────────────────────┤          ├──────────────────────┤
+│ + Undergraduate()    │          │ + Postgraduate()     │
+│ + calculateGrade()   │          │ + calculateGrade()   │
+└──────────────────────┘          └──────────────────────┘
+
+
+┌──────────────────────────────────────────────┐
+│              GradeController                 │
+├──────────────────────────────────────────────┤
+│ - studentList : ArrayList<Student>           │
+├──────────────────────────────────────────────┤
+│ + GradeController()                         │
+│ + addStudent(Student)                       │
+│ + displayAll()                              │
+│ + searchByRoll(String)                      │
+└──────────────────────────────────────────────┘
+                ◇
+                │  (Aggregation)
+                │
+                ▼
+            Student
+
+
+┌──────────────────────────────┐
+│   InvalidGradeException      │
+├──────────────────────────────┤
+│ + InvalidGradeException()    │
+└──────────────────────────────┘
+
+
+┌──────────────────────────────┐
+│            Main              │
+├──────────────────────────────┤
+│ + main(String[])             │
+└──────────────────────────────┘
+
+
+Dependencies:
+Main ─ ─ ─ ─ ▶ GradeController
+Main ─ ─ ─ ─ ▶ InvalidGradeException
