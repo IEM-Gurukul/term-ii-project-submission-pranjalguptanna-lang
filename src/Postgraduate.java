@@ -1,3 +1,13 @@
+// ============================================================
+// Postgraduate.java
+// Demonstrates: Inheritance, Polymorphism, Encapsulation
+// Purpose: Concrete subclass of Student for postgraduate students.
+//          - Inherits from Student and adds specialization field
+//          - Implements calculateGrade() with stricter postgraduate
+//            grading thresholds (Polymorphism)
+// Grading: A+ (80+), A (70-79), B (60-69), C (50-59), F (below 50)
+// ============================================================
+
 public class Postgraduate extends Student {
 
     // Extra private field for postgraduate specialization

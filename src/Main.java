@@ -1,3 +1,14 @@
+// ============================================================
+// Main.java
+// Demonstrates: Exception Handling, Collections (via controller)
+// Purpose: Entry point of the Student Grade Management System.
+//          - Provides an interactive console menu (while loop + switch)
+//          - Handles user input validation with try-catch
+//          - Uses GradeController to manage student operations
+//          - Catches InputMismatchException for non-numeric input
+//          - Catches InvalidGradeException for out-of-range marks
+// ============================================================
+
 import java.util.Scanner;
 import java.util.InputMismatchException;
 

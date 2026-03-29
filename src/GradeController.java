@@ -1,3 +1,13 @@
+// ============================================================
+// GradeController.java
+// Demonstrates: Collections (ArrayList)
+// Purpose: Controller class that manages the student records.
+//          - Uses ArrayList<Student> to store all students
+//          - Provides methods to add, display, and search students
+//          - Leverages polymorphism — same list holds both
+//            Undergraduate and Postgraduate objects
+// ============================================================
+
 import java.util.ArrayList;
 
 public class GradeController {

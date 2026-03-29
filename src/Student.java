@@ -1,6 +1,16 @@
+// ============================================================
+// Student.java
+// Demonstrates: Abstraction, Encapsulation
+// Purpose: Abstract base class for all student types.
+//          - Private fields with public getters/setters (Encapsulation)
+//          - Abstract calculateGrade() forces subclasses to define
+//            their own grading logic (Abstraction)
+//          - Marks validation using InvalidGradeException
+// ============================================================
+
 public abstract class Student {
 
-    // Private fields (Encapsulation)
+    // Private fields — cannot be accessed directly from outside (Encapsulation)
     private String name;
     private String rollNumber;
     private double marks;

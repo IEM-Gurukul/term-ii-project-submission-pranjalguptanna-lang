@@ -1,3 +1,13 @@
+// ============================================================
+// Undergraduate.java
+// Demonstrates: Inheritance, Polymorphism
+// Purpose: Concrete subclass of Student for undergraduate students.
+//          - Inherits all fields and methods from Student (Inheritance)
+//          - Implements calculateGrade() with undergraduate-specific
+//            grading thresholds (Polymorphism)
+// Grading: A (75+), B (60-74), C (50-59), D (40-49), F (below 40)
+// ============================================================
+
 public class Undergraduate extends Student {
 
     // Constructor that calls the parent Student constructor
