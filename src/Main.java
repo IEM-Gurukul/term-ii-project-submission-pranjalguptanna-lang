@@ -25,10 +25,47 @@ public class Main {
 
                 switch (choice) {
                     case 1:
-                        System.out.println("Feature coming in next task...");
+                        // Add Undergraduate Student
+                        try {
+                            System.out.print("Enter name: ");
+                            String ugName = scanner.nextLine();
+                            System.out.print("Enter roll number: ");
+                            String ugRoll = scanner.nextLine();
+                            System.out.print("Enter marks (0-100): ");
+                            double ugMarks = scanner.nextDouble();
+                            scanner.nextLine(); // consume newline
+
+                            Undergraduate ug = new Undergraduate(ugName, ugRoll, ugMarks);
+                            controller.addStudent(ug);
+                        } catch (InputMismatchException e) {
+                            System.out.println("Error: Marks must be a number.");
+                            scanner.nextLine(); // clear invalid input
+                        } catch (InvalidGradeException e) {
+                            System.out.println("Error: " + e.getMessage());
+                        }
                         break;
                     case 2:
-                        System.out.println("Feature coming in next task...");
+                        // Add Postgraduate Student
+                        try {
+                            System.out.print("Enter name: ");
+                            String pgName = scanner.nextLine();
+                            System.out.print("Enter roll number: ");
+                            String pgRoll = scanner.nextLine();
+                            System.out.print("Enter marks (0-100): ");
+                            double pgMarks = scanner.nextDouble();
+                            scanner.nextLine(); // consume newline
+                            System.out.print("Enter specialization: ");
+                            String pgSpec = scanner.nextLine();
+
+                            Postgraduate pg = new Postgraduate(pgName, pgRoll, pgMarks);
+                            pg.setSpecialization(pgSpec);
+                            controller.addStudent(pg);
+                        } catch (InputMismatchException e) {
+                            System.out.println("Error: Marks must be a number.");
+                            scanner.nextLine(); // clear invalid input
+                        } catch (InvalidGradeException e) {
+                            System.out.println("Error: " + e.getMessage());
+                        }
                         break;
                     case 3:
                         System.out.println("Feature coming in next task...");
